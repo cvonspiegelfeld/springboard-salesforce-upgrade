@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Original_Donation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>One-time donation from which this upsell originated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>One-time donation from which this upsell originated</inlineHelpText>
+        <label>Original Donation</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Donation Upsells</relationshipLabel>
+        <relationshipName>Donation_Upsells</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Original_Order_Id__c</fullName>
+        <description>Order ID of the one-time donation from which this upsell originated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order ID of the one-time donation from which this upsell originated</inlineHelpText>
+        <label>Original Order Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Upsell_Donation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Donation which originated from this upsell</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Donation which originated from this upsell</inlineHelpText>
+        <label>Upsell Donation</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Originating Upsell</relationshipLabel>
+        <relationshipName>Donation_Upsells1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Upsell_Order_Id__c</fullName>
+        <description>Order ID of the donation which originated from this upsell</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order ID of the donation which originated from this upsell</inlineHelpText>
+        <label>Upsell Order Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Upsell_Recurring_Donation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Recurring donation series which originated from this upsell</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Recurring donation series which originated from this upsell</inlineHelpText>
+        <label>Upsell Recurring Donation</label>
+        <referenceTo>npe03__Recurring_Donation__c</referenceTo>
+        <relationshipLabel>Donation Upsells</relationshipLabel>
+        <relationshipName>Donation_Upsells</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Donation Upsell</label>
+    <nameField>
+        <label>Upsell Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Donation Upsells</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

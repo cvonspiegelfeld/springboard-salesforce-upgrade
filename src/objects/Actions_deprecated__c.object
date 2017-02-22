@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>used for tracking Petition and capWiz Advocacy actions</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Action_Date__c</fullName>
+        <description>date this action or petition was taken by the user</description>
+        <externalId>false</externalId>
+        <label>Action Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Action_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Content__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Content</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Medium__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Medium</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Source</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Term</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipName>Actions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CapWiz_Alert_ID__c</fullName>
+        <description>The ID of this capWiz action</description>
+        <externalId>false</externalId>
+        <label>CapWiz Alert ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CapWiz_Alert_Recipient__c</fullName>
+        <description>Target of advocacy action from CapWiz</description>
+        <externalId>false</externalId>
+        <label>CapWiz Alert Recipient</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CapWiz_Alert_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;http://capwiz.com/client name goes here/issues/alert/?alertid=&quot; &amp;  CapWiz_Alert_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CapWiz Alert URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CapWiz_Event_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>CapWiz Event ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Which advocate took this action or signed the petition?</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Actions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Drupal_Node_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Drupal Node ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drupal_Petition_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;http://www.clientdomain.org/node/&quot; &amp; TEXT( Drupal_Node_ID__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Drupal Petition URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drupal_Submission_Record__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;https://www.clientname.org/node/&quot; &amp; TEXT( Drupal_Node_ID__c ) &amp; &quot;/submission/&quot; &amp; TEXT( Submission_ID__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Drupal Submission Record</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Referrer__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Referrer</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Source_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( LEFT( UPPER( Market_Source__c ), 3),
+&quot;EML&quot;,&quot;Email&quot;,
+&quot;WEB&quot;,&quot;Organic Website&quot;,
+&quot;BAN&quot;,&quot;Banner Ads&quot;,
+&quot;GAD&quot;,&quot;Google Ads&quot;,
+&quot;OTH&quot;,&quot;Other&quot;,
+&quot;n/a&quot;)</formula>
+        <label>Market Source Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Market Source</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Campaign</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>P2P_Personal_Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>P2P Personal Campaign</label>
+        <referenceTo>P2P_Personal_Campaign__c</referenceTo>
+        <relationshipName>Actions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Referrer__c</fullName>
+        <externalId>false</externalId>
+        <label>Referrer</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Search_Engine__c</fullName>
+        <externalId>false</externalId>
+        <label>Search Engine</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Search_String__c</fullName>
+        <externalId>false</externalId>
+        <label>Search String</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Social_Referrer_Transaction__c</fullName>
+        <externalId>false</externalId>
+        <label>Social Referrer Transaction</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submission_ID__c</fullName>
+        <description>used to track the submission ID from Drupal</description>
+        <externalId>false</externalId>
+        <label>Submission ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Agent__c</fullName>
+        <externalId>false</externalId>
+        <label>User Agent</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>User_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>User Comment</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>last_30__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TODAY() - Action_Date__c  &lt;= 30, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>last 30</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Action Deprecated</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>AllDrupalPet</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>Action_Date__c</columns>
+        <columns>Action_Name__c</columns>
+        <columns>Campaign__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Drupal_Petition_URL__c</columns>
+        <columns>Initial_Referrer__c</columns>
+        <columns>Market_Source__c</columns>
+        <columns>Market_Source_Type__c</columns>
+        <columns>Referrer__c</columns>
+        <columns>Submission_ID__c</columns>
+        <columns>User_Comment__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Actions_deprecated__c.petition_submission</value>
+        </filters>
+        <label>All Drupal Petitions</label>
+    </listViews>
+    <listViews>
+        <fullName>All_CapWiz_Actions</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>Action_Date__c</columns>
+        <columns>Action_Name__c</columns>
+        <columns>Campaign__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Drupal_Petition_URL__c</columns>
+        <columns>Initial_Referrer__c</columns>
+        <columns>Market_Source__c</columns>
+        <columns>Market_Source_Type__c</columns>
+        <columns>Referrer__c</columns>
+        <columns>Submission_ID__c</columns>
+        <columns>User_Comment__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Actions_deprecated__c.CapWiz_Action</value>
+        </filters>
+        <label>All CapWiz Actions</label>
+    </listViews>
+    <nameField>
+        <label>Action Submission Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Actions Deprecated</pluralLabel>
+    <recordTypes>
+        <fullName>CapWiz_Action</fullName>
+        <active>true</active>
+        <description>used for tracking capwiz actions</description>
+        <label>CapWiz Action</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>petition_submission</fullName>
+        <active>true</active>
+        <description>used for tracking petition submissions</description>
+        <label>Petition Submission</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

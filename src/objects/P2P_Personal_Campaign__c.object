@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Personal campaigns are campaigns created by end users on behalf of an organization</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount_Raised__c</fullName>
+        <description>The amount raised as captured in Springboard</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount raised as captured in Springboard</inlineHelpText>
+        <label>Amount Raised</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Days_Since_Last_Activitiy__c</fullName>
+        <externalId>false</externalId>
+        <formula>TODAY() - LastActivityDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Since Last Activitiy</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_in_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <formula>End_Date__c  -  Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days in Campaign</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_into_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <formula>TODAY( ) -  Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days into Campaign</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_till_Expiration__c</fullName>
+        <externalId>false</externalId>
+        <formula>End_Date__c - TODAY( )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days till Expiration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Donation_Count__c</fullName>
+        <description>The number of donations made to this personal campaign.</description>
+        <externalId>false</externalId>
+        <label>Donation Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Action_Date__c</fullName>
+        <description>The date this campaign first had an action taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date this campaign first had an action taken.</inlineHelpText>
+        <label>First Action Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fundraising_Goal__c</fullName>
+        <description>Only used if the goal type is Amount Raised</description>
+        <externalId>false</externalId>
+        <label>Fundraising Goal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Goal_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Goal Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Amount Raised</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submission Count</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Google_Campaign_Medium__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Campaign Medium</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Campaign_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Campaign Source</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Campaign Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Campaign Content</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Referrer__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Referrer</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Last_Action_Date__c</fullName>
+        <description>The date this campaign last had an action taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date this campaign last had an action taken.</inlineHelpText>
+        <label>Last Action Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Market_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Market Source</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Node_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <inlineHelpText>The node ID of this P2P Personal Campaign in Springboard</inlineHelpText>
+        <label>Node ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>P2P_Campaign_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Introduction</label>
+        <length>10000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>P2P_Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The peer to peer campaign this personal campaign belongs to.</description>
+        <externalId>false</externalId>
+        <label>P2P Campaign</label>
+        <referenceTo>P2P_Campaign__c</referenceTo>
+        <relationshipLabel>P2P Personal Campaigns</relationshipLabel>
+        <relationshipName>P2P_Personal_Campaigns</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>P2P_Campaigner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaign Owner</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>P2P Personal Campaigns (Contact)</relationshipLabel>
+        <relationshipName>P2P_Personal_Campaigns1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>P2P_Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>P2P Category</label>
+        <referenceTo>P2P_Category__c</referenceTo>
+        <relationshipLabel>P2P Personal Campaigns</relationshipLabel>
+        <relationshipName>P2P_Personal_Campaigns</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>P2P_Personal_Campaign_URL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>URL to the personal campaign within Springboard</inlineHelpText>
+        <label>P2P Personal Campaign URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Published_in_Springboard__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Is this campaign published in Springboard</inlineHelpText>
+        <label>Published in Springboard</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Referrer__c</fullName>
+        <externalId>false</externalId>
+        <label>Referrer</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salesforce_Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>What Salesforce Campaign is this P2P Personal Campaign associate to</inlineHelpText>
+        <label>Salesforce Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>P2P Personal Campaigns</relationshipLabel>
+        <relationshipName>P2P_Personal_Campaigns</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Search_Engine__c</fullName>
+        <externalId>false</externalId>
+        <label>Search Engine</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Search_String__c</fullName>
+        <externalId>false</externalId>
+        <label>Search String</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submission_Count__c</fullName>
+        <description>The number of submissions from Springboard</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of submissions from Springboard</inlineHelpText>
+        <label>Submission Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submission_Goal__c</fullName>
+        <description>Only used if the goal type is Submission Count</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Count of submissions for Submission Count goal types, calculated by Springboard</inlineHelpText>
+        <label>Submission Goal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suggested_Donation_Amount__c</fullName>
+        <description>The suggested donation amount from the P2P Personal Campaign in Springboard</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The suggested donation amount from the P2P Personal Campaign in Springboard</inlineHelpText>
+        <label>Suggested Donation Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Message_Actions__c</fullName>
+        <description>The total number of message actions taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of message actions taken by this contact.</inlineHelpText>
+        <label>Total Message Actions</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Petitions_Signed__c</fullName>
+        <description>Total number of petitions signed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of petitions signed.</inlineHelpText>
+        <label>Total Petitions Signed</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Social_Actions__c</fullName>
+        <description>The total number of social actions taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of social actions taken by this contact.</inlineHelpText>
+        <label>Total Social Actions</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Agent__c</fullName>
+        <externalId>false</externalId>
+        <label>User Agent</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>P2P Personal Campaign</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>P2P Personal Campaign Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>P2P Personal Campaigns</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

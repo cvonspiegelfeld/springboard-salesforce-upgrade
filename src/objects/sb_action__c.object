@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Springboard Advocacy Object for all actions.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actions_Taken__c</fullName>
+        <description>The total number of contacts who have successfully taken this action. (CONFIRM)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of contacts who have successfully taken this action. (CONFIRM)</inlineHelpText>
+        <label>Actions Taken</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Body__c</fullName>
+        <description>Body/long description of the action.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the body or long description of the action.</inlineHelpText>
+        <label>Body</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campaign this action is related to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campaign this action is related to.</inlineHelpText>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Actions</relationshipLabel>
+        <relationshipName>Actions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date_Created__c</fullName>
+        <description>Create date of the action</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Create date of the action</inlineHelpText>
+        <label>Date Created</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Device_Browser__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Browser</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Device_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Device_OS__c</fullName>
+        <externalId>false</externalId>
+        <label>Device OS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Device_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>E_mail_Mailing_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>E-mail Mailing ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Edit_URL__c</fullName>
+        <description>Link to edit this action in Springboard.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to edit this action in Springboard.</inlineHelpText>
+        <label>Edit URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>First_Action_Date__c</fullName>
+        <description>Date of the first action taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the first action taken.</inlineHelpText>
+        <label>First Action Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Name__c</fullName>
+        <description>Internal organizational name for this action, if there is one.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Internal organizational name for this action, if there is one.</inlineHelpText>
+        <label>Internal Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Action_Date__c</fullName>
+        <description>Date of the last action taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the last action taken.</inlineHelpText>
+        <label>Last Action Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legislative_Issue__c</fullName>
+        <description>Legislative issue(s) for this action, selected in Springboard.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Legislative issue(s) for this action, selected in Springboard.</inlineHelpText>
+        <label>Legislative Issue</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization_Issue__c</fullName>
+        <description>Organization issue(s) for this action, selected in Springboard.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Organization issue(s) for this action, selected in Springboard.</inlineHelpText>
+        <label>Organization Issue</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Campaign</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Public_URL__c</fullName>
+        <description>Public URL of the action.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Public URL of the action.</inlineHelpText>
+        <label>Public URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Social_Shares__c</fullName>
+        <description>Number of times this action was shared on social media.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of times this action was shared on social media.</inlineHelpText>
+        <label>Social Shares</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Springboard_ID__c</fullName>
+        <description>ID of the action in Springboard</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of the action in Springboard</inlineHelpText>
+        <label>Springboard ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Action</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Action Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Actions</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Message_Action</fullName>
+        <active>true</active>
+        <label>Message Action</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Petitions</fullName>
+        <active>true</active>
+        <description>used for tracking Springboard petitions</description>
+        <label>Petitions</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Social_Action</fullName>
+        <active>true</active>
+        <label>Social Action</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

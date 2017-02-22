@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Sustainer_Upgrade_Amount_Field__c</fullName>
+        <description>The field on the Contact object that contains the sustainer upgrade amount value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field on the Contact object that contains the sustainer upgrade amount value.</inlineHelpText>
+        <label>Sustainer Upgrade Amount Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sustainer_Upgrade_Form_Id__c</fullName>
+        <description>The Drupal node ID of the sustainer upgrade form that will be used to perform upgrades. This is an optional parameter because one form will be designated as the default in the Springboard website.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Drupal node ID of the sustainer upgrade form that will be used to perform upgrades. This is an optional parameter because one form will be designated as the default in the Springboard website.</inlineHelpText>
+        <label>Sustainer Upgrade Form Id</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sustainer_Upgrade_Token_Lifespan__c</fullName>
+        <description>The number of days a Sustainer Upgrade link should be considered valid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of days a Sustainer Upgrade link should be considered valid.</inlineHelpText>
+        <label>Sustainer Upgrade Token Lifespan</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Springboard Settings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

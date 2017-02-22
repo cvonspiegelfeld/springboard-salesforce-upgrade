@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>A list of which actions have been taken by which contacts.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Action_Type__c</fullName>
+        <description>Type of action</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of action</inlineHelpText>
+        <label>Action Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Message Action</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Petition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Action</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Action_URL__c</fullName>
+        <description>This is a link to the action on your website.</description>
+        <externalId>false</externalId>
+        <formula>&quot;https://clientnamehere.gospringboard.com/node/&quot; &amp; TEXT(Action__r.Springboard_ID__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is a link to the action on your website.</inlineHelpText>
+        <label>Action URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Action__c</fullName>
+        <description>Springboard actions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A Springboard action.</inlineHelpText>
+        <label>Action</label>
+        <referenceTo>sb_action__c</referenceTo>
+        <relationshipLabel>Actions Taken</relationshipLabel>
+        <relationshipName>Actions_Taken</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campaign this action taken is related to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campaign this action taken is related to.</inlineHelpText>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Actions Taken</relationshipLabel>
+        <relationshipName>Actions_Taken</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>The contact who has taken action.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This person has taken this action.</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Actions Taken</relationshipLabel>
+        <relationshipName>Actions_Taken</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Date_of_Action__c</fullName>
+        <description>Date the action was taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the action was taken.</inlineHelpText>
+        <label>Date of Action</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Device_Browser__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Browser</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Device_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Device_OS__c</fullName>
+        <externalId>false</externalId>
+        <label>Device OS</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Device_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generated_Message_Count__c</fullName>
+        <description>The number of messages (deliverable or undeliverable) generated by the action taken</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of messages (deliverable or undeliverable) generated by the action taken</inlineHelpText>
+        <label>Generated Message Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Market_Source__c</fullName>
+        <description>Initial market source</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Initial market source</inlineHelpText>
+        <label>Initial Market Source</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Referrer__c</fullName>
+        <description>Initial Referrer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Initial Referrer</inlineHelpText>
+        <label>Initial Referrer</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Link_to_Message__c</fullName>
+        <description>A link to the actual message in the data warehouse.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a link to the actual message that was sent.</inlineHelpText>
+        <label>Link to Message</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Market_Source_Type__c</fullName>
+        <description>Market Source Type</description>
+        <externalId>false</externalId>
+        <formula>CASE( LEFT( UPPER( Initial_Market_Source__c ), 3),
+&quot;EML&quot;,&quot;Email&quot;,
+&quot;WEB&quot;,&quot;Organic Website&quot;,
+&quot;BAN&quot;,&quot;Banner Ads&quot;,
+&quot;GAD&quot;,&quot;Google Ads&quot;,
+&quot;OTH&quot;,&quot;Other&quot;,
+&quot;n/a&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Market Source Type</inlineHelpText>
+        <label>Market Source Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Source__c</fullName>
+        <description>Market source for this action.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Market source for this action.</inlineHelpText>
+        <label>Market Source</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Message_Edited__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether or not the message was edited prior to submission</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether or not the message was edited prior to submission</inlineHelpText>
+        <label>Message Edited</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>P2P_Personal_Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The peer to peer personal campaign from which the action originated.</description>
+        <externalId>false</externalId>
+        <label>P2P Personal Campaign</label>
+        <referenceTo>P2P_Personal_Campaign__c</referenceTo>
+        <relationshipLabel>Actions Taken</relationshipLabel>
+        <relationshipName>Actions_Taken</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quick_Sign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Did the user take action via QuickSign?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Did the user take action via QuickSign?</inlineHelpText>
+        <label>Quick Sign</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Referrer__c</fullName>
+        <description>Referrer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Referrer</inlineHelpText>
+        <label>Referrer</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Search_Engine__c</fullName>
+        <description>Search engine used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Search engine used.</inlineHelpText>
+        <label>Search Engine</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Search_String__c</fullName>
+        <description>Search string</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Search string</inlineHelpText>
+        <label>Search String</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submission_ID__c</fullName>
+        <description>ID of the webform submission</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of the webform submission</inlineHelpText>
+        <label>Submission ID</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Agent__c</fullName>
+        <description>User Agent</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User Agent</inlineHelpText>
+        <label>User Agent</label>
+        <length>800</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>utm_campaign__c</fullName>
+        <description>Campaign Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campaign Name</inlineHelpText>
+        <label>utm_campaign</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>utm_content__c</fullName>
+        <description>Campaign Content</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campaign Content</inlineHelpText>
+        <label>utm_content</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>utm_medium__c</fullName>
+        <description>Campaign Medium</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campaign Medium</inlineHelpText>
+        <label>utm_medium</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>utm_source__c</fullName>
+        <description>Campaign Source</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campaign Source</inlineHelpText>
+        <label>utm_source</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>utm_term__c</fullName>
+        <description>Campaign Term</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campaign Term</inlineHelpText>
+        <label>utm_term</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Actions Taken</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Actions Taken Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Actions Taken</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>
