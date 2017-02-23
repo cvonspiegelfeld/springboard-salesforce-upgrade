@@ -3,6 +3,39 @@
     <customSettingsType>List</customSettingsType>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>Encryptor_IV__c</fullName>
+        <externalId>false</externalId>
+        <label>Encryptor IV</label>
+        <length>16</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Encryptor_Key__c</fullName>
+        <externalId>false</externalId>
+        <label>Encryptor Key</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OCDonate_HMAC_Token_Lifespan__c</fullName>
+        <description>The number of days an HMAC-based One Click Donate action link should be considered valid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of days an HMAC-based One Click Donate action link should be considered valid.</inlineHelpText>
+        <label>One Click Donate HMAC Token Lifespan</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Sustainer_Upgrade_Amount_Field__c</fullName>
         <description>The field on the Contact object that contains the sustainer upgrade amount value.</description>
         <externalId>false</externalId>
@@ -39,6 +72,77 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sustainers_Billing_Autologout_Seconds__c</fullName>
+        <description>Optional. If the Automatic Logout module is enabled and a value of 60 or more is provided here, the Sustainer Billing Update form will be given an inactivity logout of this number of seconds.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional. If the Automatic Logout module is enabled and a value of 60 or more is provided here, the Sustainer Billing Update form will be given an inactivity logout of this number of seconds.</inlineHelpText>
+        <label>Sustainers Billing Autologout Seconds</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sustainers_HMAC_Excluded_Gateways__c</fullName>
+        <description>A carriage return-delimited list of Payment Gateway values. Recurring payments with any of these gateways will be excluded from Sustainer Upgrade and Billing Update HMAC processing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A carriage return-delimited list of Payment Gateway values. Recurring payments with any of these gateways will be excluded from Sustainer Upgrade and Billing Update HMAC processing.</inlineHelpText>
+        <label>Sustainers HMAC Excluded Gateways</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sustainers_HMAC_Token_Lifespan__c</fullName>
+        <description>The number of days an HMAC-based Sustainer Upgrade or Billing Update action link should be considered valid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of days an HMAC-based Sustainer Upgrade or Billing Update action link should be considered valid.</inlineHelpText>
+        <label>Sustainers HMAC Token Lifespan</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sustainers_Upgrade_Amount_Field__c</fullName>
+        <description>The field on the Contact object that contains the sustainer upgrade amount value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field on the Contact object that contains the sustainer upgrade amount value.</inlineHelpText>
+        <label>Sustainers Upgrade Amount Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sustainers_Upgrade_Form_Id__c</fullName>
+        <description>The Drupal node ID of the sustainer upgrade form that will be used to perform upgrades. This is an optional parameter because one form will be designated as the default in the Springboard website.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Drupal node ID of the sustainer upgrade form that will be used to perform upgrades. This is an optional parameter because one form will be designated as the default in the Springboard website.</inlineHelpText>
+        <label>Sustainers Upgrade Form Id</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trigger_Prefixes_Active__c</fullName>
+        <description>Carriage return-delimited list of Springboard Trigger class prefixes currently active for execution.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Carriage return-delimited list of Springboard Trigger class prefixes currently active for execution.</inlineHelpText>
+        <label>Trigger Prefixes Active</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <label>Springboard Settings</label>
     <visibility>Protected</visibility>
