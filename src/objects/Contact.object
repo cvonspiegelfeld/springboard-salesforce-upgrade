@@ -1634,6 +1634,50 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Billing_Update_Last_Scheduled_Donation__c</fullName>
+        <description>Date of the last scheduled donation for the donor’s soonest-expiring recurring donation series.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set automatically by batch Apex.</inlineHelpText>
+        <label>Billing Update Last Scheduled Donation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Update_Recurring_Order_ID__c</fullName>
+        <description>Master Donation ID of the donor’s soonest-expiring recurring donation series.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set automatically by batch Apex.</inlineHelpText>
+        <label>Billing Update Recurring Order ID</label>
+        <length>16</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Update_Token_Expiration__c</fullName>
+        <description>Expiration date and time for the token in the Billing Update URL.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set automatically by batch Apex.</inlineHelpText>
+        <label>Billing Update Token Expiration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Update_URL__c</fullName>
+        <description>URL (path only) to login and redirect the user to the Billing Update form for the soonest-expiring recurring series.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set automatically by batch Apex.</inlineHelpText>
+        <label>Billing Update URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Birthdate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -1835,6 +1879,26 @@ null
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Sustainer_Upgrade_Date__c</fullName>
+        <description>The timestamp of the Contact&apos;s last sustainer upgrade attempt.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The timestamp of the Contact&apos;s last sustainer upgrade attempt.</inlineHelpText>
+        <label>Last Sustainer Upgrade Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Sustainer_Upgrade_Successful__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Whether the contact&apos;s most recent sustainer upgrade attempt was successful.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Whether the contact&apos;s most recent sustainer upgrade attempt was successful.</inlineHelpText>
+        <label>Last Sustainer Upgrade Successful</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>LeadSource</fullName>
@@ -2195,6 +2259,16 @@ IF((MailingStreet == &apos;&apos; || MailingStreet == NULL),&apos;&apos;, &apos;
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Sustainer_Upgrade_Token_Expiration__c</fullName>
+        <description>The date the current sustainer upgrade token expires.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the current sustainer upgrade token expires.</inlineHelpText>
+        <label>Sustainer Upgrade Token Expiration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>Title</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -2318,6 +2392,39 @@ IF((MailingStreet == &apos;&apos; || MailingStreet == NULL),&apos;&apos;, &apos;
         <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Upgradable_Recurring_Donations__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Upgradable Recurring Donations</label>
+        <referenceTo>npe03__Recurring_Donation__c</referenceTo>
+        <relationshipLabel>Contacts</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Upgrade_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Recurring_Donation_Amount__c * 0.5) + Recurring_Donation_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Upgrade Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Upgrade_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Upgrade URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
