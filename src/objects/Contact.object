@@ -1940,6 +1940,132 @@ null
         <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>OCDonate_Active_Subscription__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This points to the contact&apos;s active One Click Donate subscription object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This points to the contact&apos;s active One Click Donate subscription object.</inlineHelpText>
+        <label>One Click Donate Active Subscription</label>
+        <referenceTo>One_Click_Donate_Subscription__c</referenceTo>
+        <relationshipLabel>Contacts</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OCDonate_Active__c</fullName>
+        <description>Indicates whether this contact has an active One Click Donate subscription.</description>
+        <externalId>false</externalId>
+        <formula>IF((ISBLANK(OCDonate_Opt_Out_Date__c) || ISNULL (OCDonate_Opt_Out_Date__c)) &amp;&amp; !ISBLANK(OCDonate_Opt_in_Date__c) &amp;&amp; !ISNULL(OCDonate_Opt_in_Date__c), True,False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If checked, this contact has an active One Click Donate subscription.</inlineHelpText>
+        <label>Active One Click Donate Subscription?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OCDonate_CC_Exp_Month__c</fullName>
+        <description>Expiration month (number) of the credit card used by the contact&apos;s active One Click Donate subscription.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expiration month (number) of the credit card used by the contact&apos;s active One Click Donate subscription.</inlineHelpText>
+        <label>One Click Donate CC Exp Month</label>
+        <length>2</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OCDonate_CC_Exp_Year__c</fullName>
+        <description>Expiration year of the credit card used by the contact&apos;s One Click Donate subscription.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expiration year of the credit card used by the contact&apos;s One Click Donate subscription.</inlineHelpText>
+        <label>One Click Donate CC Exp Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OCDonate_CC_Last_4__c</fullName>
+        <description>Last 4 digits of the credit card used by the contact&apos;s active One Click Donate subscription.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 4 digits of the credit card used by the contact&apos;s active One Click Donate subscription.</inlineHelpText>
+        <label>One Click Donate CC Last 4</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OCDonate_CC_Type__c</fullName>
+        <description>Type of credit card used by the contact&apos;s active One Click Donate subscription.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of credit card used by the contact&apos;s active One Click Donate subscription.</inlineHelpText>
+        <label>One Click Donate CC Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OCDonate_Opt_Out_Date__c</fullName>
+        <description>Date the contact opted out of One Click Donate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the contact opted out of One Click Donate.</inlineHelpText>
+        <label>One Click Donate Opt-Out Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OCDonate_Opt_in_Date__c</fullName>
+        <description>Date the contact opted into One Click Donate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the contact opted into One Click Donate.</inlineHelpText>
+        <label>One Click Donate Opt-in Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OCDonate_Payment_Gateway__c</fullName>
+        <description>Payment gateway used by the contact&apos;s active OCD subscription.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment gateway used by the contact&apos;s active OCD subscription.</inlineHelpText>
+        <label>One Click Donate Payment Gateway</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OCDonate_Token_Expiration__c</fullName>
+        <description>Date/time at which the current OCD token expires.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/time at which the current OCD token expires.</inlineHelpText>
+        <label>One Click Donate Token Expiration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>OCDonate_URL__c</fullName>
+        <description>One Click Donate HMAC token.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Append this token to the site/form URL to facilitate a one-click donation.</inlineHelpText>
+        <label>One Click Donate URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>OtherAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
