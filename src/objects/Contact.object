@@ -2217,11 +2217,10 @@ IF((MailingStreet == &apos;&apos; || MailingStreet == NULL),&apos;&apos;, &apos;
         <fullName>Recurring_Donation_Order_Id__c</fullName>
         <externalId>false</externalId>
         <label>Recurring Donation Order Id</label>
-        <precision>18</precision>
+        <length>16</length>
         <required>false</required>
-        <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
